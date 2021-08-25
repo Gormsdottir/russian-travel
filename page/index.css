@@ -1,6 +1,6 @@
 @import url(../vendor/normalize.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+@import url(../fonts/inter.css);
 
 @import url(../blocks/root/root.css);
 
@@ -184,7 +184,7 @@
     .cover {
         margin: 90px 0 0;
         width: 768px;
-        min-height: 480px ;
+        min-height: 480px;
     }
 
     .footer {
