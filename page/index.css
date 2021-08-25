@@ -34,7 +34,7 @@
 
 @import url(../blocks/intro/__list/intro__list.css);
 
-@import url(../blocks/intro/__list/_accent/intro__list_accent.css);
+@import url(../blocks/intro/__list/_accent/intro__span-accent.css);
 
 @import url(../blocks/photo-grid/photo-grid.css);
 
