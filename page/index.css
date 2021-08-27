@@ -38,23 +38,29 @@
 
 @import url(../blocks/photo-grid/photo-grid.css);
 
+@import url(../blocks/photo-grid/__items/photo-grid__items.css);
+
 @import url(../blocks/photo-grid/__item/photo-grid__item.css);
+
+@import url(../blocks/photo-grid/__image/photo-grid__image.css);
 
 @import url(../blocks/places/places.css);
 
-@import url(../blocks/places/__place/places__place.css);
+@import url(../blocks/places/__container/places__container.css);
 
-@import url(../blocks/places/__title/places__title.css);
+@import url(../blocks/place/place.css);
 
-@import url(../blocks/places/__website/places__website.css);
+@import url(../blocks/place/__title/place__title.css);
 
-@import url(../blocks/places/__image/places__image.css);
+@import url(../blocks/place/__website/place__website.css);
 
-@import url(../blocks/places/__url-heading/places__url-heading.css);
+@import url(../blocks/place/__image/place__image.css);
 
-@import url(../blocks/places/__link/places__link.css);
+@import url(../blocks/place/__url-heading/place__url-heading.css);
 
-@import url(../blocks/places/__paragraph/places__paragraph.css);
+@import url(../blocks/place/__link/place__link.css);
+
+@import url(../blocks/place/__paragraph/place__paragraph.css);
 
 @import url(../blocks/cover/cover.css);
 
@@ -75,7 +81,7 @@
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
-    
+
     .main {
         max-width: 1024px;
     }
@@ -84,26 +90,26 @@
         margin: 48px 48px 0;
         max-width: 928px;
     }
-    
+
     .intro {
         margin: 92px 286px 0 48px;
     }
 
-    .photo-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+    .photo-grid__items {
+        grid-template-columns: repeat(3, 300px);
         gap: 14px;
     }
 
-    .places__place {
+    .place {
         column-gap: 32px;
+        grid-template-columns: fit-content(440px) fit-content(456px);
     }
 
-    .places__image {
+    .place__image {
         max-width: 440px;
     }
 
-    .places__paragraphs {
+    .place__paragraphs {
         max-width: 456px;
     }
 
@@ -121,26 +127,26 @@
 @media all and (max-width: 1023px) {
 
     .lead {
-        margin: 48px 0 0;
+        margin: 48px auto 0;
     }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
-    
+
     .header {
-        margin: 28px 24px 0; 
+        margin: 28px 24px 0;
     }
 
     .main {
-        max-width: 768px;
+        min-width: 768px;
     }
 
     .lead__subtitle {
         margin: 32px auto 56px;
     }
-    
+
     .lead__caption {
-      margin: 8px 0 0 24px;
+        margin: 8px 0 0 24px;
     }
 
     .intro {
@@ -148,9 +154,11 @@
     }
 
     .photo-grid {
-        margin: 88px 24px 0;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        margin: 88px auto 0;
+    }
+
+    .photo-grid__items {
+        grid-template-columns: repeat(2, 352px);
         gap: 16px;
     }
 
@@ -159,24 +167,24 @@
         gap: 73px;
     }
 
-    .places__place {
+    .place {
         column-gap: 28px;
         grid-template-columns: 340px 1fr;
         grid-template-rows: repeat(2, auto);
         max-width: 720px;
     }
 
-    .places__title {
+    .place__title {
         font-size: 42px;
         line-height: 46px;
         align-self: end;
     }
 
-    .places__image {
+    .place__image {
         max-width: 340px;
     }
-    
-    .places__paragraph {
+
+    .place__paragraph {
         font-size: 16px;
         line-height: 28.08px;
     }
@@ -193,7 +201,7 @@
 }
 
 @media all and (max-width: 767px) {
-    
+
     .header {
         margin: 16px 16px 0;
     }
@@ -235,16 +243,19 @@
     .intro {
         margin: 64px 16px 0;
     }
-    
+
     .intro__title {
         font-size: 32px;
         line-height: 35px;
     }
 
     .photo-grid {
-        margin: 64px 16px 0;
-        grid-template-columns: 1fr;
-        gap: 12px;
+        margin: 64px auto 0;
+    }
+
+    .photo-grid__items {
+        grid-template-columns: 288px;
+        gap: 14px;
     }
 
     .places {
@@ -252,26 +263,29 @@
         gap: 50px;
     }
 
-    .places__place {
+    .places__container {
+        justify-content: normal;
+    }
+
+    .place {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fill, 1fr);
         row-gap: 32px;
     }
 
-    .places__title {
+    .place__title {
         font-size: 32px;
         line-height: 35px;
     }
-    
-    .places__image {
+
+    .place__image {
         max-width: 320px;
     }
 
-    .places__paragraphs {
+    .place__paragraphs {
         max-width: 288px;
     }
 
-    .places__paragraph {
+    .place__paragraph {
         font-size: 16px;
         line-height: 26.8px;
     }
