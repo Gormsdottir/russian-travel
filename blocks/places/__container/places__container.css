@@ -7,3 +7,17 @@
     justify-content: center;
     gap: 80px;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .places__container {
+        gap: 72px;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .places__container {
+        gap: 50px;
+    }
+}
