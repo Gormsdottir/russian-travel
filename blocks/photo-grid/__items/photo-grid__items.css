@@ -30,6 +30,6 @@
 
     .photo-grid__items {
         grid-template-columns: 288px;
-        gap: 14px;
+        gap: 12px;
     }
 }
