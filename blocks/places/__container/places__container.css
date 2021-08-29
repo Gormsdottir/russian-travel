@@ -1,9 +1,0 @@
-.places__container {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: fit-content(984px);
-    justify-content: center;
-    gap: 80px;
-}
